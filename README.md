@@ -1,34 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Showcase
 
-## Getting Started
+## Overview
+This Next.js project is a collection of different webpage frontends mapped to different routes to showcase different types and styles of webpages. Currently, the implementation of each webpage is meant to help practice different HTML and CSS techniques within the Next.js framework. In the future, each of these webpages will have backends built to complement them, though the primary scope of this project is to gain familiarity with Next.js
 
-First, run the development server:
+## Project 1 - Bonsai Marketing
+The first subproject of this showcase will be a marketing webpage that shows the user different plans at different prices that they can choose from. The primary features highlighted here are:
+* Streamlined UI
+* Sticky headers
+* Carousels
+* Drop-down menus
+* Toggle buttons (boolean switching)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Credits
+Thank you to [Frontend Practice](https://www.frontendpractice.com/projects) for providing a compilation of different ideas from which to springboard for refining frontend technical skills. 
+Thank you also to [Font Awesome](https://fontawesome.com/) for providing free icons that were used throughout the project.
