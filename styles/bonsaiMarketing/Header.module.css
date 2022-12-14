@@ -1,0 +1,30 @@
+.header {
+    background-color: lightblue;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.headerElement {
+    display: flex;
+    align-self: center;
+}
+
+.centerElement {
+    margin: 0px 15px;
+    background-color: transparent;
+    border-color: transparent;
+    color: #4C4E5F;
+}
+
+.centerElement:hover {
+    background-color: transparent;
+    color: #4C4E5F;
+    border-color: transparent;
+}
+
+.button {
+    border-color: #00B288;
+    margin: 10px;
+    padding: 5px 20px;
+    font-weight: 10;
+}
