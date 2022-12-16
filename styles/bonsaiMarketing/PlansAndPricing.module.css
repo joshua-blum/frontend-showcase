@@ -1,33 +1,3 @@
-/* <div className={styles.plansAndPricing}>
-<div className={styles.header}>
-    <div className={styles.title}>Plans &#38; Pricing</div>
-    <div className={styles.toggleButton}>this is where the toggle button stuff will be</div>
-</div>
-<div className={styles.planCardsList}>
-    <div className={styles.planCard}>
-        Card 1
-    </div>
-    <div className={styles.planCard}>
-        Card 2
-    </div>
-    <div className={styles.planCard}>
-        Card 3
-    </div>
-</div>
-<div className={styles.header}>Super charge your work with add-ons</div>
-<div className={styles.addOnsList}>
-    <div className={styles.addOnCard}>
-        Add On 1
-    </div>
-    <div className={styles.addOnCard}>
-        Add On 2
-    </div>
-    <div className={styles.addOnCard}>
-        Add On 3
-    </div>
-</div>
-</div> */
-
 .plansAndPricing {
     display: flex;
     flex-direction: column;
@@ -57,9 +27,49 @@
 }
 
 .planCard {
+    display: flex;
+    flex-direction: column;
+    border-color: black;
+    border-style: dotted;
     margin: 10px;
     padding: 10px;
 }
+
+.planTitle {
+    font-size: 25px;
+}
+
+.planDescription {
+    font-size: 14px;
+}
+
+.planPrice {
+    font-size: 30px;
+}
+
+.planSubtitle {
+    font-size: 14px;
+    font-weight: bold;
+    align-self: flex-end;
+}
+
+/*
+
+            <div className={styles.planCardsList}>
+                <div className={styles.planCard}>
+                    <h1 className={styles.planTitle}>Card 1</h1>
+                    <p className={styles.planDescription}>Here is a stock description</p>
+                    <div className={`${styles.planPrice} ${styles.monthlyPlan}`}>$24 / MONTH</div>
+                    <div className={`${styles.planPrice} ${styles.yearlyPlan}`}>$17 / MONTH</div>
+                    <div className={`${styles.planSubtitle} ${styles.yearlyPlan}`}>BILLED MONTHLY</div>
+                    <br className={styles.planBreak}/>
+                    <ul className={styles.planDetails}>
+                        <li key={1} className={styles.listElement}>info deet 1</li>
+                        <li key={2} className={styles.listElement}>info deet 2</li>
+                        <li key={3} className={styles.listElement}>info deet 3</li>
+                    </ul>
+                </div>
+*/
 
 .addOnsList {
     background-color: green;
