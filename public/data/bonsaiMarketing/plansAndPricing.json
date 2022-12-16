@@ -1,0 +1,59 @@
+{
+    "name": "plansAndPricing",
+    "attributes": [
+        {
+            "id": "Starter",
+            "description": "Ideal for freelancers and contractors just starting out.",
+            "priceMonthly": 24,
+            "priceYearly": 17,
+            "details": [
+                "All Templates", 
+                "Unlimited Clients & Projects",
+                "Invoicing & Payments",
+                "Proposals & Contracts",
+                "Tasks & Time Tracking",
+                "Client CRM",
+                "Expense Tracking",
+                "Up to 5 Project Collaborators"
+            ],
+            "isPopular": false
+        },
+        {
+            "id": "Professional",
+            "description": "Everything a growing independent business needs to thrive.",
+            "priceMonthly": 39,
+            "priceYearly": 32,
+            "details": [
+                "Everything in Starter plus...",
+                "Custom Branding",
+                "Forms & Questionnaires",
+                "Workflow Automations",
+                "Client Portal",
+                "QuickBooks Integration",
+                "Calendly Integration",
+                "Zapier Integration",
+                "Up to 15 Project Collaborators"
+            ],
+            "isPopular": true
+        },
+        {
+            "id": "Business",
+            "description": "The perfect package for small businesses and agencies.",
+            "priceMonthly": 79,
+            "priceYearly": 52,
+            "details": [
+                "Everything in Starter and Professional plus...", 
+                "Subcontractor Management",
+                "Hiring Agreement Templates (1099 contracts)",
+                "Subcontractor Onboarding",
+                "Talent Pool",
+                "3 Team Seats (additional seats $9/month)",
+                "Accountant Access",
+                "Connect Multiple Bank Accounts",
+                "Unlimited Subcontractors",
+                "Unlimited Project Collaborators"
+            ],
+            "isPopular": false
+        }
+    ]
+}

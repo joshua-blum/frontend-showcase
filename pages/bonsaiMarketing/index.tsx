@@ -12,7 +12,6 @@ export default function Home(){
                 <title>Bonsai Marketing</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             </Head>
-            <div>Hello world</div>
             <BonsaiHeader />
             <BonsaiPlansAndPricing />
             <BonsaiPromo />

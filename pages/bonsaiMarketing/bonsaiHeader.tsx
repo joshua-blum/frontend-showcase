@@ -1,6 +1,5 @@
 import styles from '../../styles/bonsaiMarketing/Header.module.css';
-import Image from 'next/image'
-import { setSyntheticLeadingComments } from 'typescript';
+import Image from 'next/image';
 
 export default function BonsaiHeader(){
     return (
@@ -39,7 +38,7 @@ export default function BonsaiHeader(){
             </div>
             <div className={styles.headerElement}>
                 <button className={`btn ${styles.button}`}>LOG IN</button>
-                <button className={`btn ${styles.button}`}>START FREE</button>
+                <button className={`btn ${styles.button} ${styles.green}`}>START FREE</button>
             </div>
         </div>
     )

@@ -1,7 +1,8 @@
 .header {
-    background-color: lightblue;
+    background-color: #fff;
     display: flex;
     justify-content: space-evenly;
+    padding: 5px 40px;
 }
 
 .headerElement {
@@ -20,11 +21,19 @@
     background-color: transparent;
     color: #4C4E5F;
     border-color: transparent;
+    font-size: 12px;
 }
 
 .button {
     border-color: #00B288;
+    color: #00B288;
     margin: 10px;
-    padding: 5px 20px;
-    font-weight: 10;
+    padding: 7px 25px;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.green {
+    background-color: #00B288;
+    color: #fff
 }
