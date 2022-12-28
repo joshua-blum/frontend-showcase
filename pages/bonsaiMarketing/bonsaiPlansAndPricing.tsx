@@ -27,6 +27,7 @@ function formatPlanCards(planCardList: any){
                         planCard.details.map((detail: string) => {return <li key={detail} className={styles.listElement}>{detail}</li>}) 
                         : <h1>Loading...</h1>}
                 </ul>
+                <button className={`btn btn-secondary ${styles.startPlanButton}`}>START FREE </button>
             </div>
             )
         })
