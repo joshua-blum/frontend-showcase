@@ -1,7 +1,7 @@
 import styles from '../../styles/bonsaiMarketing/PlansAndPricing.module.css';
 import React, {useState, useEffect} from 'react';
 
-function formatPlanCards(planCardList: any){
+function formatPlanCards(isYearly: boolean, planCardList: any){
     return planCardList.map(
         (planCard: 
             {
@@ -18,9 +18,13 @@ function formatPlanCards(planCardList: any){
             <div className={styles.planCard}>
                 <h1 className={styles.planTitle}>{planCard.title}</h1>
                 <p className={styles.planDescription}>{planCard.description}</p>
-                <div className={`${styles.planPrice} ${styles.monthlyPlan}`}>${planCard.priceMonthly} <span className={styles.planSubtitle}>/MONTH</span></div>
-                <div className={`${styles.planPrice} ${styles.yearlyPlan}`}>${planCard.priceYearly}  <span className={styles.planSubtitle}>/MONTH</span></div>
-                <div className={`${styles.planSubtitle} ${styles.yearlyPlan}`}>BILLED MONTHLY</div>
+                {isYearly ? 
+                    (<>
+                        <div className={`${styles.planPrice} ${styles.yearlyPlan}`}>${planCard.priceYearly}  <span className={styles.planSubtitle}>/MONTH</span></div>
+                        <div className={`${styles.planSubtitle} ${styles.yearlyPlan}`}>BILLED MONTHLY</div>
+                    </>) :
+                    (<div className={`${styles.planPrice} ${styles.monthlyPlan}`}>${planCard.priceMonthly} <span className={styles.planSubtitle}>/MONTH</span></div>)
+                }
                 <br className={styles.planBreak}/>
                 <ul className={styles.planDetails}>
                     {planCard.details ? 
@@ -45,7 +49,7 @@ export default function BonsaiPlansAndPricing(){
         .then((res) => setPlanCardList(res))
     }, [])
 
-    const planCardHTML = formatPlanCards(planCardList);
+    const planCardHTML = formatPlanCards(isYearly, planCardList);
 
 
     return (
