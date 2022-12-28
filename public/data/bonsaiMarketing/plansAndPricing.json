@@ -2,7 +2,8 @@
     "name": "plansAndPricing",
     "attributes": [
         {
-            "id": "Starter",
+            "id": 1,
+            "title": "Starter",
             "description": "Ideal for freelancers and contractors just starting out.",
             "priceMonthly": 24,
             "priceYearly": 17,
@@ -19,7 +20,8 @@
             "isPopular": false
         },
         {
-            "id": "Professional",
+            "id": 2,
+            "title": "Professional",
             "description": "Everything a growing independent business needs to thrive.",
             "priceMonthly": 39,
             "priceYearly": 32,
@@ -37,7 +39,8 @@
             "isPopular": true
         },
         {
-            "id": "Business",
+            "id": 3,
+            "title": "Business",
             "description": "The perfect package for small businesses and agencies.",
             "priceMonthly": 79,
             "priceYearly": 52,
