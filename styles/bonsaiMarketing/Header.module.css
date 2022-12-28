@@ -21,7 +21,6 @@
     background-color: transparent;
     color: #4C4E5F;
     border-color: transparent;
-    font-size: 12px;
 }
 
 .button {
@@ -33,7 +32,11 @@
     font-size: 12px;
 }
 
+.button:hover {
+    background-color: #4C4E5F
+}
+
 .green {
-    background-color: #00B288;
+    background-color: #00B288 !important;
     color: #fff
 }

@@ -58,12 +58,14 @@ export default function BonsaiPlansAndPricing(){
         <div className={styles.plansAndPricing}>
             <div className={styles.header}>
                 <div className={styles.title}>Plans &#38; Pricing</div>
+                <div className={styles.toggleButton}>
                 <label className={styles.switch}>
                     <input className={styles.checkbox} type="checkbox" id="switch" hidden/>
                     <span className={`${styles.slider} ${styles.round}`}></span>
                     <span className={styles.toggleLabelMonthly}>Monthly</span>
                     <span className={styles.toggleLabelYearly}>Yearly</span>
                 </label>
+                </div>
             </div>
             <div className={styles.planCardsList}>
                 {planCardHTML}
