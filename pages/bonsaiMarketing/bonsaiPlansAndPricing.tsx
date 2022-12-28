@@ -44,7 +44,7 @@ export default function BonsaiPlansAndPricing(){
         .then((res) => setPlanCardList(res))
     }, [])
 
-    const innerHTML = formatPlanCards(planCardList);
+    const planCardHTML = formatPlanCards(planCardList);
 
 
     return (
@@ -52,10 +52,12 @@ export default function BonsaiPlansAndPricing(){
         <div className={styles.plansAndPricing}>
             <div className={styles.header}>
                 <div className={styles.title}>Plans &#38; Pricing</div>
-                <div className={styles.toggleButton}>Monthly button Yearly</div>
+                <div className={styles.toggleButton}>
+                    monthly button yearly
+                </div>
             </div>
             <div className={styles.planCardsList}>
-                {innerHTML}
+                {planCardHTML}
             </div>
             <div className={styles.header}>Super charge your work with add-ons</div>
             <div className={styles.addOnsList}>
