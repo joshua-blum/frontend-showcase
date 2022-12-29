@@ -1,5 +1,7 @@
 import styles from '../../styles/bonsaiMarketing/PlansAndPricing.module.css';
 import React, {useState, useEffect} from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 function formatPlanCards(isYearly: boolean, planCardList: any){
     return planCardList.map(
@@ -25,10 +27,12 @@ function formatPlanCards(isYearly: boolean, planCardList: any){
                     </>) :
                     (<div className={`${styles.planPrice} ${styles.monthlyPlan}`}>${planCard.priceMonthly} <span className={styles.planSubtitle}>/MONTH</span></div>)
                 }
-                <br className={styles.planBreak}/>
+                <hr className={styles.planBreak}/>
                 <ul className={styles.planDetails}>
                     {planCard.details ? 
-                        planCard.details.map((detail: string) => {return <li key={detail} className={styles.listElement}>{detail}</li>}) 
+                        planCard.details.map((detail: string) => {return <li key={detail} className={styles.listElement}>
+                            <FontAwesomeIcon icon={faCheck} className={styles.listDecoration}/> &nbsp;
+                            {detail}</li>}) 
                         : <h1>Loading...</h1>}
                 </ul>
                 <button className={`btn btn-secondary ${styles.startPlanButton}`}>START FREE </button>
@@ -58,13 +62,14 @@ export default function BonsaiPlansAndPricing(){
         <div className={styles.plansAndPricing}>
             <div className={styles.header}>
                 <div className={styles.title}>Plans &#38; Pricing</div>
+                <hr className={styles.headerBreak} />
                 <div className={styles.toggleButton}>
-                <label className={styles.switch}>
-                    <input className={styles.checkbox} type="checkbox" id="switch" hidden/>
-                    <span className={`${styles.slider} ${styles.round}`}></span>
-                    <span className={styles.toggleLabelMonthly}>Monthly</span>
-                    <span className={styles.toggleLabelYearly}>Yearly</span>
-                </label>
+                    <label className={styles.switch}>
+                        <input className={styles.checkbox} type="checkbox" id="switch" hidden/>
+                        <span className={`${styles.slider} ${styles.round}`}></span>
+                        <span className={styles.toggleLabelMonthly}>Monthly</span>
+                        <span className={styles.toggleLabelYearly}>Yearly</span>
+                    </label>
                 </div>
             </div>
             <div className={styles.planCardsList}>
