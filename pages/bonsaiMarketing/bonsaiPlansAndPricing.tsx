@@ -45,7 +45,6 @@ function formatPlanCards(isYearly: boolean, planCardList: any){
 export default function BonsaiPlansAndPricing(){
     const [planCardList, setPlanCardList] = useState([<h1>Loading...</h1>]);
     const [isYearly, setIsYearly] = useState(false);
-
     useEffect(() => {
         fetch('http://localhost:3000/data/bonsaiMarketing/plansAndPricing.json')
         .then((res) => res.json())
@@ -55,17 +54,15 @@ export default function BonsaiPlansAndPricing(){
 
     const planCardHTML = formatPlanCards(isYearly, planCardList);
 
-
     return (
         <>
-
         <div className={styles.plansAndPricing}>
             <div className={styles.header}>
                 <div className={styles.title}>Plans &#38; Pricing</div>
                 <hr className={styles.headerBreak} />
                 <div className={styles.toggleButton}>
                     <label className={styles.switch}>
-                        <input className={styles.checkbox} type="checkbox" id="switch" hidden/>
+                        <input className={styles.checkbox} type="checkbox" id="switch" onClick={() => setIsYearly(!isYearly)} hidden/>
                         <span className={`${styles.slider} ${styles.round}`}></span>
                         <span className={styles.toggleLabelMonthly}>Monthly</span>
                         <span className={styles.toggleLabelYearly}>Yearly</span>

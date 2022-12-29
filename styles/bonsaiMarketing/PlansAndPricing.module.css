@@ -114,14 +114,17 @@
 
 .planTitle {
     font-size: 25px;
+    margin: 10px;
 }
 
 .planDescription {
     font-size: 14px;
+    margin: 10px;
 }
 
 .planPrice {
     font-size: 30px;
+    margin: 0px 10px 0px 10px;
 }
 
 .planSubtitle {
