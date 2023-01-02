@@ -41,18 +41,55 @@ function formatPlanCards(isYearly: boolean, planCardList: any){
         })
 }
 
+function formatAddOns(addOnsList: any){
+    return addOnsList.map(
+        (addOn: 
+            {
+                id: string, 
+                title: string, 
+                description: string,
+                price: number,
+                detailLink: string
+            }
+        ) => {   
+        return (
+            <div className={styles.addOnCard}>
+                <div className={styles.addOnDetails}>
+                    <h1 className={styles.addOnTitle}>{addOn.title}</h1>
+                    <p className={styles.addOnDescription}>{addOn.description}</p>
+                    {addOn.detailLink ?
+                        <a className={styles.addOnLink} href={addOn.detailLink}>Learn More &gt; </a> :
+                        null}
+                </div>
+                {addOn.price ? 
+                    <div className={styles.addOnPrice}>${addOn.price} <span className={styles.planSubtitle}>/MONTH</span></div> :
+                    <div className={styles.addOnPrice}>Free</div>
+                }
+            </div>
+            )
+        })
+}
+
 
 export default function BonsaiPlansAndPricing(){
     const [planCardList, setPlanCardList] = useState([<h1>Loading...</h1>]);
     const [isYearly, setIsYearly] = useState(false);
+    const [addOnsList, setAddOnsList] = useState([<h1>Loading...</h1>])
+
     useEffect(() => {
         fetch('http://localhost:3000/data/bonsaiMarketing/plansAndPricing.json')
         .then((res) => res.json())
         .then((json) => [...json.attributes])
-        .then((res) => setPlanCardList(res))
+        .then((res) => setPlanCardList(res));
+
+        fetch('http://localhost:3000/data/bonsaiMarketing/addOns.json')
+        .then((res) => res.json())
+        .then((json) => [...json.attributes])
+        .then((res) => setAddOnsList(res));
     }, [])
 
     const planCardHTML = formatPlanCards(isYearly, planCardList);
+    const addOnHTML = formatAddOns(addOnsList);
 
     return (
         <>
@@ -74,15 +111,7 @@ export default function BonsaiPlansAndPricing(){
             </div>
             <div className={styles.header}>Super charge your work with add-ons</div>
             <div className={styles.addOnsList}>
-                <div className={styles.addOnCard}>
-                    Add On 1
-                </div>
-                <div className={styles.addOnCard}>
-                    Add On 2
-                </div>
-                <div className={styles.addOnCard}>
-                    Add On 3
-                </div>
+                {addOnHTML}
             </div>
         </div>
         </>

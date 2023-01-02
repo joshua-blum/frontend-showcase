@@ -1,0 +1,26 @@
+{
+    "name": "addOns",
+    "attributes": [
+        {
+            "id": 1,
+            "title": "Collaborators",
+            "description": "Invite other users to specific projects for limited access and functionality.",
+            "price": null,
+            "detailLink": null
+        },
+        {
+            "id": 2,
+            "title": "Partners",
+            "description": "Invite other users for full account access and company management.",
+            "price": 9,
+            "detailLink": null
+        },
+        {
+            "id": 3,
+            "title": "Tax Assistant",
+            "description": "Track expenses, identify write-offs, and estimate quarterly taxes easily.",
+            "price": 10,
+            "detailLink": "http://localhost:3000/bonsaiMarketing"
+        }
+    ]
+}
