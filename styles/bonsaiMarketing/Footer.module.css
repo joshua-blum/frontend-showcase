@@ -1,0 +1,10 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 40px;
+}
+
+.column {
+    max-width: 20vw;
+}

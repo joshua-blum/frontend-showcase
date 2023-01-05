@@ -8,7 +8,7 @@ export default function BonsaiFAQ(){
                 <Accordion className={styles.questionGroup} flush alwaysOpen>
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>How does the 14 day free trial work? &nbsp;</Accordion.Header>
-                        <Accordion.Body className={styles.answer}>
+                        <Accordion.Body>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
                         minim veniam, quis nostrud exercitation ullamco laboris nisi ut
