@@ -3,7 +3,7 @@
     flex-direction: column;
     background-color: #fff;
     color: #4C4E5F;
-    padding: 40px;
+    padding: 40px 40px 20px 40px;
 }
 
 .header {
@@ -35,7 +35,7 @@
     width: 60px;
     height: 34px;
     margin: 0px 0px 6px 0px;
-  }
+    }
 
   .slider {
     position: absolute;
@@ -47,7 +47,7 @@
     background-color: #00B288;
     -webkit-transition: .4s;
     transition: .4s;
-  }
+    }
 
   .slider:before {
     content: 'Monthly';
@@ -170,7 +170,6 @@
     padding: 10px 0px;
     font-weight: 700;
     font-size: 12px;
-
 }
 
 .addOnsList {

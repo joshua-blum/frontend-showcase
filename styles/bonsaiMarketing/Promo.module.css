@@ -1,0 +1,46 @@
+.promo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.jumbotron {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 40px;
+    padding: 40px;
+    background-color: #F2FBFF;
+    border-style: solid;
+    border-color: #614A47;
+    border-width: 0.5px;
+    box-shadow: 2px 2px 5px 1px #614A47;
+}
+
+.message {
+    font-family: 'Times New Roman', Times, serif;
+    color: #614A47;
+}
+
+.green {
+    color: #00B288
+}
+
+.buttonGroup {
+    justify-self: flex-end
+}
+
+.button {
+    border-color: #00B288;
+    background-color: #00B288;
+    margin: 10px 10px 10px 70px;
+    padding: 10px 40px;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.button:hover {
+    background-color: #00B288;
+    border-color: #fff;
+}
