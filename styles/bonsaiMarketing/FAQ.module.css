@@ -4,5 +4,22 @@
     align-items: center;
     justify-content: center;
     padding: 30px;
-    background-color: orange;
+    color: #4C4E5F;
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+    color: #03bd91;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.questionGroup {
+    display: flex;
+    flex-direction: column;
+    width: 75vw;
+}
+
+.answer {
+    background-color: #fff;
 }
