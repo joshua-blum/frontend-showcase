@@ -1,0 +1,17 @@
+.galleryContainer {
+    display: flex;
+    padding: 20px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image {
+    margin: 10px;
+    width: 600px;
+    height: 500px;
+    border-radius: 15px;
+    object-fit: none;
+    object-position: center;
+}
