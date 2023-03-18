@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    background-color: white;
+    justify-content: center;
+}
+
+.sliderGroup {
+    display: flex;
+    background-color: lavender;
+    margin: 10px;
+    justify-content: center;
+    border-radius: 45px;
+}
+
+.sliderHeading {
+    margin: 3px;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    padding: 5px 20px;
+    border-radius: 45px;
+}
+
+.currentPage {
+    background-color: white;
+}
