@@ -2,7 +2,7 @@ import Head from 'next/head';
 import AhStudioHeader from './ahStudioHeader';
 import AhStudioJumbo from './ahStudioJumbo';
 import AhStudioGallery from './ahStudioGallery';
-import AhStudioFooter from './AhStudioFooter';
+import AhStudioFooter from './ahStudioFooter';
 
 export default function Home(){
     return (

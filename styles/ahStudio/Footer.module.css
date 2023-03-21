@@ -1,0 +1,43 @@
+.grey {
+    color: grey;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.mainFooter {
+    background-color: white;
+    color: black;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.branding {
+    display: flex;
+    flex-direction: row;
+}
+
+.copyright {
+    align-self: center;
+    padding: 10px;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.button {
+    background-color: transparent;
+    border-color: transparent;
+    color: black;
+    padding: 0px 10px;
+}
