@@ -9,9 +9,9 @@
 
 .image {
     margin: 10px;
-    width: 600px;
-    height: 500px;
+    width: 35vw;
+    height: 55vh;
     border-radius: 15px;
-    object-fit: none;
+    object-fit: cover;
     object-position: center;
 }
