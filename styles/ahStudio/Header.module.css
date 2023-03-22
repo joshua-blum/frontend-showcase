@@ -1,7 +1,10 @@
 .header {
     display: flex;
-    background-color: white;
     justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
 }
 
 .sliderGroup {
@@ -22,4 +25,14 @@
 
 .currentPage {
     background-color: white;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.transparent {
+    background-color: transparent;
 }
