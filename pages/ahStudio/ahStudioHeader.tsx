@@ -5,7 +5,7 @@ export default function Header(){
     const [isTransparent, setIsTransparent] = useState(false);
     if(typeof window !== 'undefined'){
     window.addEventListener("scroll", () => {
-        if(window.scrollY >= 100) setIsTransparent(true);
+        if(window.scrollY >= 90) setIsTransparent(true);
         else setIsTransparent(false);
     })}
     

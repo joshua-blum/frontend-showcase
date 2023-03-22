@@ -10,6 +10,7 @@
 .sliderGroup {
     display: flex;
     background-color: lavender;
+    opacity: 95%;
     margin: 10px;
     justify-content: center;
     border-radius: 45px;
