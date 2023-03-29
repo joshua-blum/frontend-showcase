@@ -1,10 +1,13 @@
 import jumboStyles from '/styles/ahStudio/Jumbo.module.css';
 import footerStyles from '/styles/ahStudio/Footer.module.css';
+import fadeInStyles from '/styles/ahStudio/Overall.module.css';
+import { useInView } from 'react-intersection-observer';
 
 export default function Footer(){
+    const {ref: boxRef, inView} = useInView();
     return (<>
         <div className={`jumbotron jumbotron-fluid ${jumboStyles.jumbo}`}>
-            <div className={jumboStyles.container}>
+            <div ref={boxRef} className={`${jumboStyles.container} ${fadeInStyles.fadeup} ${inView ? fadeInStyles.inView: ''}`}>
                 <h4 className={`${jumboStyles.header} ${footerStyles.header}`}>Let's work together.<br/><span className={footerStyles.grey}>Get in touch.</span></h4>
             </div>
         </div>

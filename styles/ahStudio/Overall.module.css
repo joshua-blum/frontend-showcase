@@ -1,0 +1,16 @@
+.section {
+    background-color: white;
+}
+
+.fadeup {
+    transform: translateY(50px);
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+  }
+  
+  .inView {
+    transform: none;
+    opacity: 1;
+  }
