@@ -24,9 +24,6 @@
     align-items: center;
 }
 
-.albumArt {
-}
-
 .albumSubtitle {
     writing-mode: vertical-lr;
     text-orientation: mixed;
@@ -64,8 +61,9 @@
     font-family: 'Staatliches';
 }
 
-.buttonOptions {
+.buttonOptions, .streamingOptions {
     display: flex;
+    margin: 10px 0px;
 }
 
 .button {
@@ -78,6 +76,7 @@
     border-color: transparent;
     border-width: 2px;
     color: white;
+    align-items: center;
 }
 
 .listenNowButton {
@@ -88,4 +87,35 @@
 
 .shareButton {
     border: 2px solid white;
+}
+
+.streamingContainer {
+    display: flex;
+    padding: 30px;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Staatliches';
+    text-transform: uppercase;
+}
+
+.streamingButton {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.button:hover, .streamingButton:hover {
+    background-color: white;
+    transition: 0.25s;
+    color: black;
+}
+
+.listenNowButton:hover, .shareButton:hover {
+    padding: 10px 20px;
+    transition: 0.25s;
 }
