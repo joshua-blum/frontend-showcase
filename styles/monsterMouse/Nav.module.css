@@ -1,11 +1,10 @@
 .header {
     display: flex;
     justify-content: space-between;
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100%;
     z-index: 1000;
-    /* background-color: rgb(202, 199, 199); */
-    background-color: blue;
 }
 
 .image {
@@ -15,7 +14,7 @@
 }
 
 .logo {
-    padding: 20px;
+    padding: 40px;
     align-self: flex-start;
 }
 
@@ -27,8 +26,7 @@
 .sidebar {
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    background-color: orange;
+    padding: 40px;
 }
 
 .menu {
