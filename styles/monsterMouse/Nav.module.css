@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    /* background-color: rgb(202, 199, 199); */
+    background-color: blue;
+}
+
+.image {
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+}
+
+.logo {
+    padding: 20px;
+    align-self: flex-start;
+}
+
+.logoImage {
+    height: 60px;
+    width: 60px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: orange;
+}
+
+.menu {
+    align-self: center;
+}
