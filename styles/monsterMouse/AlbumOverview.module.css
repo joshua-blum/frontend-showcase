@@ -1,0 +1,16 @@
+.overview {
+    display: flex;
+    background-image: 
+    radial-gradient(transparent 30%, black),
+    linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5) 
+    ),
+    url('/images/monsterMouse/skald_album_cover.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    justify-content: center;
+    background-color: black;
+}
