@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
 .overview {
     display: flex;
+    flex-direction: row;
     background-image: 
     radial-gradient(transparent 30%, black),
     linear-gradient(
@@ -10,7 +13,79 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 100vh;
-    justify-content: center;
+    height: 90vh;
+    justify-content: space-evenly;
     background-color: black;
+}
+
+.album {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+
+.albumArt {
+}
+
+.albumSubtitle {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    font-size: 20px;
+    height: 500px;
+    margin: 0px 3px;
+    font-family: 'Oswald';
+    font-style: italic;
+}
+
+.category {
+    font-style: normal;
+    color: slategrey;
+    font-weight: bolder;
+}
+
+.namesAndActions {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.albumName {
+    font-family: 'Staatliches';
+    text-transform: uppercase;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+}
+
+.artistName {
+    font-family: 'Staatliches';
+}
+
+.buttonOptions {
+    display: flex;
+}
+
+.button {
+    display: flex;
+    padding: 10px 15px;
+    font-size: 20px;
+    font-family: 'Staatliches';
+    text-transform: uppercase;
+    background-color: transparent;
+    border-color: transparent;
+    border-width: 2px;
+    color: white;
+}
+
+.listenNowButton {
+    background-color: slategrey;
+    border: 2px solid slategrey;
+    margin: 0px 5px;
+}
+
+.shareButton {
+    border: 2px solid white;
 }
