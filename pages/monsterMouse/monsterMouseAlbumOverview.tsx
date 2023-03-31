@@ -13,38 +13,30 @@ export default function AlbumOverview(){
                     <h3 className={styles.artistName}>SKÁLD</h3>
                     <div className={styles.buttonOptions}>
                         <button className={`${styles.button} ${styles.listenNowButton}`}>
-                            <FontAwesomeIcon
-                                icon={faPlay} /> &nbsp;
+                            <FontAwesomeIcon icon={faPlay} /> &nbsp;
                             Listen Now</button>
                         <button className={`${styles.button} ${styles.shareButton}`}>
-                            <FontAwesomeIcon
-                                icon={faShareNodes} /> &nbsp;
-                            Share</button>
+                            <FontAwesomeIcon icon={faShareNodes} /> &nbsp; Share
+                            </button>
                     </div>
                     <div className={styles.streamingOptions}> 
                         <button className={styles.streamingButton}>
-                            <FontAwesomeIcon
-                                icon={faAmazon} />
+                            <FontAwesomeIcon icon={faAmazon} />
                         </button>
                         <button className={styles.streamingButton}>
-                            <FontAwesomeIcon
-                                icon={faBandcamp} />
+                            <FontAwesomeIcon icon={faBandcamp} />
                         </button>
                         <button className={styles.streamingButton}>
-                            <FontAwesomeIcon
-                                icon={faSoundcloud} />
+                            <FontAwesomeIcon icon={faSoundcloud} />
                         </button>
                         <button className={styles.streamingButton}>
-                            <FontAwesomeIcon
-                                icon={faApple} />
+                            <FontAwesomeIcon icon={faApple} />
                         </button>
                         <button className={styles.streamingButton}>
-                            <FontAwesomeIcon
-                                icon={faYoutube} />
+                            <FontAwesomeIcon icon={faYoutube} />
                         </button>
                         <button className={styles.streamingButton}>
-                            <FontAwesomeIcon
-                                icon={faSpotify} />
+                            <FontAwesomeIcon icon={faSpotify} />
                         </button>
                     </div>
                 </div>

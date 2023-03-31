@@ -78,6 +78,7 @@
     border-width: 2px;
     color: white;
     align-items: center;
+    z-index: 100;
 }
 
 .listenNowButton {
@@ -108,15 +109,17 @@
     background-color: transparent;
     border: 2px solid white;
     color: white;
+    z-index: 100;
+    align-items: center;
 }
 
 .button:hover, .streamingButton:hover {
     background-color: white;
-    transition: 0.25s;
     color: black;
+    transition: 0.3s;
+    padding: 0px 20px;
 }
 
 .listenNowButton:hover, .shareButton:hover {
     padding: 10px 20px;
-    transition: 0.25s;
 }
