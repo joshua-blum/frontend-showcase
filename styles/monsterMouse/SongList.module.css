@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
-.songList {
+.songList, .musicVideo {
     display: flex;
     flex-direction: column;
     padding: 50px;
@@ -53,5 +53,10 @@
     margin: 0px 30px 0px 0px;
 }
 
+.musicVideo {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+}
 
 

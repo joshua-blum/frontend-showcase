@@ -1,6 +1,8 @@
+import {useEffect, useState} from 'react';
 import styles from '/styles/monsterMouse/SongList.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faPause, faShareNodes } from '@fortawesome/free-solid-svg-icons'
+import { faPlay, faPause, faShareNodes } from '@fortawesome/free-solid-svg-icons';
+import ReactPlayer from 'react-player';
 
 
 function makeSongList(artistName: string, albumList: {id: number, title: string, duration: string}[]){
@@ -27,6 +29,19 @@ function makeSongList(artistName: string, albumList: {id: number, title: string,
         )
     });
     return songList;
+}
+
+function displayPlayer(){
+    const [windowLoaded, setWindowLoaded] = useState(false);
+    useEffect(() => {
+        if(typeof window !== undefined) setWindowLoaded(true);
+    }, []);
+    return (
+        <section className={styles.musicVideo}>
+                <h2 className={styles.title}>Music Video - Fimbulvetr</h2>
+                {windowLoaded && <ReactPlayer className={styles.video} url="https://www.youtube.com/watch?v=W22lRPhQYmc" muted={true} controls={true}/>}
+        </section>
+    )
 }
 
 export default function SongList(){
@@ -91,9 +106,12 @@ export default function SongList(){
     ]
 
     return (
-        <section className={styles.songList}>
-            <h2 className={styles.title}>Track List</h2>
-            {makeSongList(artistName, albumList)}
-        </section>
+        <>
+            <section className={styles.songList}>
+                <h2 className={styles.title}>Track List</h2>
+                {makeSongList(artistName, albumList)}
+            </section>
+            {displayPlayer()}
+        </>
     )
 }
