@@ -39,7 +39,9 @@ function displayPlayer(){
     return (
         <section className={styles.musicVideo}>
                 <h2 className={styles.title}>Music Video - Fimbulvetr</h2>
-                {windowLoaded && <ReactPlayer className={styles.video} url="https://www.youtube.com/watch?v=W22lRPhQYmc" muted={true} controls={true}/>}
+                <div className={styles.video}>
+                    {windowLoaded && <ReactPlayer className={styles.video} url="https://www.youtube.com/watch?v=W22lRPhQYmc" muted={true} controls={true}/>}
+                </div>
         </section>
     )
 }

@@ -85,10 +85,12 @@
     background-color: slategrey;
     border: 2px solid slategrey;
     margin: 0px 5px;
+    transition: 0.25s;
 }
 
 .shareButton {
     border: 2px solid white;
+    transition: 0.25s;
 }
 
 .streamingContainer {
@@ -111,6 +113,7 @@
     color: white;
     z-index: 100;
     align-items: center;
+    transition: 0.25s;
 }
 
 .button:hover, .streamingButton:hover {

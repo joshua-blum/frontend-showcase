@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Staatliches';
+}
+
+.pageBreak {
+    width: 90vw;
+}
+
+.footerMain {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    width: 90vw;
+}
+
+.footerList, .newsLetter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.footerList {
+    list-style-type: none;
+    text-transform: uppercase;
+    margin: 10px;
+    font-size: 25px;
+}
+
+.footerElement {
+    margin: 5px;
+}
+
+.newsletter {
+    margin: 10px;
+    align-self: center;
+    padding: 60px;
+}
+
+.title {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.emailInput {
+    display: flex;
+}
+
+.email {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid grey;
+    width: 80%;
+    outline: none;
+    color: slategrey;
+    font-weight: bold;
+    transition: 0.25s
+}
+
+.message {
+    color: grey;
+}
+
+.email:focus {
+    width: 100%;
+    transition: 0.25s;
+}
+
+.copyright, .message {
+    font-style: italic;
+}
+
+.copyright {
+    letter-spacing: 0.2rem;
+}
+
+.credentials {
+    padding: 30px;
+}
