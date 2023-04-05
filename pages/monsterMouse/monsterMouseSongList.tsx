@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import {useEffect, useState, useRef} from 'react';
 import styles from '/styles/monsterMouse/SongList.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faPause, faShareNodes } from '@fortawesome/free-solid-svg-icons';
@@ -6,13 +6,26 @@ import ReactPlayer from 'react-player';
 
 
 function makeSongList(artistName: string, albumList: {id: number, title: string, duration: string}[]){
+    const audioPlayer = useRef();
+    const [isPlaying, setIsPlaying] = useState(false);
+
+    const togglePlay = () => {
+        const prevState = isPlaying;
+        setIsPlaying(!isPlaying);
+        if(!prevState) audioPlayer.current.play();
+        else audioPlayer.current.pause();
+    }
+
     let songList = albumList.map(({id, title, duration}) => {
         return (
-            <div className={styles.song}>
+            <div key={id} className={styles.song}>
                 <div className={styles.songContainer}>
                     <div className={styles.songId}>{id}</div>
-                    <button className={styles.button}>
-                        <FontAwesomeIcon className={styles.playIcon} icon={faPlay} /> 
+                    <button className={styles.button} onClick={togglePlay}>
+                        <FontAwesomeIcon className={styles.playIcon} icon={isPlaying ? faPause : faPlay} /> 
+                        <audio ref={audioPlayer} className={styles.audioPlayer} src="/data/monsterMouse/frosty-rap.mp3">
+                            your browser is hurting
+                        </audio>
                     </button>
                     <div className={styles.songDetail}>
                         <div className={styles.songTitle}>{title}</div>
