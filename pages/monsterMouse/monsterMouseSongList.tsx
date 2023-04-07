@@ -4,62 +4,63 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faPause, faShareNodes } from '@fortawesome/free-solid-svg-icons';
 import ReactPlayer from 'react-player';
 
+export default function SongList(){
 
-function makeSongList(artistName: string, albumList: {id: number, title: string, duration: string}[]){
-    const audioPlayer = useRef<HTMLAudioElement>(null);
-    const [isPlaying, setIsPlaying] = useState(false);
-
-    const togglePlay = () => {
-        const prevState = isPlaying;
-        setIsPlaying(!isPlaying);
-        if(!prevState) audioPlayer.current?.play();
-        else audioPlayer.current?.pause();
-    }
-
-    let songList = albumList.map(({id, title, duration}) => {
-        return (
-            <div key={id} className={styles.song}>
-                <div className={styles.songContainer}>
-                    <div className={styles.songId}>{id}</div>
-                    <button className={styles.button} onClick={togglePlay}>
-                        <FontAwesomeIcon className={styles.playIcon} icon={isPlaying ? faPause : faPlay} /> 
-                        <audio ref={audioPlayer} className={styles.audioPlayer} src="/data/monsterMouse/frosty-rap.mp3">
-                            your browser is hurting
-                        </audio>
-                    </button>
-                    <div className={styles.songDetail}>
-                        <div className={styles.songTitle}>{title}</div>
-                        <div className={styles.songArtist}>{artistName}</div>
-                    </div>
-                </div>
-                <div className={styles.songContainer}>
-                    <div className={styles.songDuration}>{duration} &nbsp; &nbsp;  |  </div>
-                    <button className={styles.button}>
-                        <FontAwesomeIcon className={styles.shareIcon} icon={faShareNodes} /> 
-                    </button>
-                </div>
-            </div>
-        )
-    });
-    return songList;
-}
-
-function displayPlayer(){
     const [windowLoaded, setWindowLoaded] = useState(false);
     useEffect(() => {
         if(typeof window !== undefined) setWindowLoaded(true);
     }, []);
-    return (
-        <section className={styles.musicVideo}>
-                <h2 className={styles.title}>Music Video - Fimbulvetr</h2>
-                <div className={styles.video}>
-                    {windowLoaded && <ReactPlayer className={styles.video} url="https://www.youtube.com/watch?v=W22lRPhQYmc" muted={true} controls={true}/>}
-                </div>
-        </section>
-    )
-}
 
-export default function SongList(){
+    const audioPlayer = useRef<HTMLAudioElement>(null);
+    const [isPlaying, setIsPlaying] = useState(false);
+
+    function makeSongList(artistName: string, albumList: {id: number, title: string, duration: string}[]){
+
+        const togglePlay = () => {
+            const prevState = isPlaying;
+            setIsPlaying(!isPlaying);
+            if(!prevState) audioPlayer.current?.play();
+            else audioPlayer.current?.pause();
+        }
+
+        let songList = albumList.map(({id, title, duration}) => {
+            return (
+                <div key={id} className={styles.song}>
+                    <div className={styles.songContainer}>
+                        <div className={styles.songId}>{id}</div>
+                        <button className={styles.button} onClick={togglePlay}>
+                            <FontAwesomeIcon className={styles.playIcon} icon={isPlaying ? faPause : faPlay} /> 
+                            <audio ref={audioPlayer} className={styles.audioPlayer} src="/data/monsterMouse/frosty-rap.mp3">
+                                your browser is hurting
+                            </audio>
+                        </button>
+                        <div className={styles.songDetail}>
+                            <div className={styles.songTitle}>{title}</div>
+                            <div className={styles.songArtist}>{artistName}</div>
+                        </div>
+                    </div>
+                    <div className={styles.songContainer}>
+                        <div className={styles.songDuration}>{duration} &nbsp; &nbsp;  |  </div>
+                        <button className={styles.button}>
+                            <FontAwesomeIcon className={styles.shareIcon} icon={faShareNodes} /> 
+                        </button>
+                    </div>
+                </div>
+            )
+        });
+        return songList;
+    }
+
+    function displayPlayer(){
+        return (
+            <section className={styles.musicVideo}>
+                    <h2 className={styles.title}>Music Video - Fimbulvetr</h2>
+                    <div className={styles.video}>
+                        {windowLoaded && <ReactPlayer className={styles.video} url="https://www.youtube.com/watch?v=W22lRPhQYmc" muted={true} controls={true}/>}
+                    </div>
+            </section>
+        )
+    }
 
     const artistName : string = 'SKÁLD'
     const albumList : {id: number, title: string, duration: string}[] = [

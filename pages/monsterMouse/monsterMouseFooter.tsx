@@ -24,7 +24,7 @@ export default function Footer(){
                 </ul>
                 <div className={styles.newsletter}>
                     <h3 className={styles.title}>MonsterMouse News</h3>
-                    <p className={styles.message}>Don't miss a thing! Stay up to date with the latest news from us</p>
+                    <p className={styles.message}>Don&apos;t miss a thing! Stay up to date with the latest news from us</p>
                     <form className={styles.emailInput}>
                         <input className={styles.email} type="text" value={emailAddress} placeholder="Email address" onChange={(e) => {setEmailAddress(e.target.value)}}></input>
                     </form>

@@ -8,7 +8,7 @@ export default function Footer(){
     return (<>
         <div className={`jumbotron jumbotron-fluid ${jumboStyles.jumbo}`}>
             <div ref={boxRef} className={`${jumboStyles.container} ${fadeInStyles.fadeup} ${inView ? fadeInStyles.inView: ''}`}>
-                <h4 className={`${jumboStyles.header} ${footerStyles.header}`}>Let's work together.<br/><span className={footerStyles.grey}>Get in touch.</span></h4>
+                <h4 className={`${jumboStyles.header} ${footerStyles.header}`}>Let us work together.<br/><span className={footerStyles.grey}>Get in touch.</span></h4>
             </div>
         </div>
         <footer className={footerStyles.mainFooter}>

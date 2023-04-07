@@ -17,7 +17,7 @@ function formatPlanCards(isYearly: boolean, planCardList: any){
             }
         ) => {   
         return (
-            <div className={styles.planCard}>
+            <div key={`${planCard.id}-${planCard.title}`} className={styles.planCard}>
                 <h1 className={styles.planTitle}>{planCard.title}</h1>
                 <p className={styles.planDescription}>{planCard.description}</p>
                 {isYearly ? 
@@ -53,7 +53,7 @@ function formatAddOns(addOnsList: any){
             }
         ) => {   
         return (
-            <div className={styles.addOnCard}>
+            <div key={`${addOn.id}-${addOn.title}`} className={styles.addOnCard}>
                 <div className={styles.addOnDetails}>
                     <h1 className={styles.addOnTitle}>{addOn.title}</h1>
                     <p className={styles.addOnDescription}>{addOn.description}</p>
@@ -72,9 +72,9 @@ function formatAddOns(addOnsList: any){
 
 
 export default function BonsaiPlansAndPricing(){
-    const [planCardList, setPlanCardList] = useState([<h1>Loading...</h1>]);
+    const [planCardList, setPlanCardList] = useState([<h1 key="loadingPlanCards">Loading...</h1>]);
     const [isYearly, setIsYearly] = useState(false);
-    const [addOnsList, setAddOnsList] = useState([<h1>Loading...</h1>])
+    const [addOnsList, setAddOnsList] = useState([<h1 key="loadingAddOns">Loading...</h1>])
 
     useEffect(() => {
         fetch('http://localhost:3000/data/bonsaiMarketing/plansAndPricing.json')
