@@ -6,14 +6,14 @@ import ReactPlayer from 'react-player';
 
 
 function makeSongList(artistName: string, albumList: {id: number, title: string, duration: string}[]){
-    const audioPlayer = useRef();
+    const audioPlayer = useRef<HTMLAudioElement>(null);
     const [isPlaying, setIsPlaying] = useState(false);
 
     const togglePlay = () => {
         const prevState = isPlaying;
         setIsPlaying(!isPlaying);
-        if(!prevState) audioPlayer.current.play();
-        else audioPlayer.current.pause();
+        if(!prevState) audioPlayer.current?.play();
+        else audioPlayer.current?.pause();
     }
 
     let songList = albumList.map(({id, title, duration}) => {
