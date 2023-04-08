@@ -1,8 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import {useRouter} from 'next/router';
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <div className={styles.container}>
       <Head>
@@ -13,19 +16,19 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to a Frontend Showcase
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
+          Using the power of Next.js to create solid frontend pages
         </p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+
+            <button className={styles.card} onClick={() => router.push('/ahStudio')}>
+              <h2>Documentation &rarr;</h2>
+              <p>Find in-depth information about Next.js features and API.</p>
+            </button>
 
           <a href="https://nextjs.org/learn" className={styles.card}>
             <h2>Learn &rarr;</h2>
