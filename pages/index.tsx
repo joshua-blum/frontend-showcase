@@ -32,7 +32,7 @@ export default function Home() {
 
           <button className={styles.card} onClick={() => router.push('/monsterMouse')}>
             <h2>Monster Mouse &rarr;</h2>
-            <p>Here's a landing page for a music player, with promotional design patterns</p>
+            <p>Here is a landing page for a music player, with promotional design patterns</p>
           </button>
 
           <button className={`${styles.card} ${styles.inProgress}`}>
